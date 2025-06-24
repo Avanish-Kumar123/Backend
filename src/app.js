@@ -15,6 +15,14 @@ app.use(express.static("public")) // public name ka ek folder banaya hu jisme li
 app.use(cookieParser())//isse sirf server hi cookie padh pata hai aur remove kr pata hai browser se securely
 
 
+//router import
+import userRouter from './routes/user.routes.js' //jab export default hoga tbhi aisa import kr skte hai 
+
+
+//routes declaraton
+app.use("/api/v1/users", userRouter)
+
+//http://localhost:8000/api/v1/users/register
 export { app }
 
 
